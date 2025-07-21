@@ -1,7 +1,7 @@
- Linux Driver Evaluator
+#Linux Driver Evaluator
 A modular Python project that generates, analyzes, and evaluates Linux character device drivers using LLMs like Groq's LLaMA and Gemma. The project runs style checks and computes static scores for generated code.
 
-I am creating a Directed Acyclic LangGraph:
+#Directed Acyclic LangGraph:
 Directed: Each step flows in one direction (like → arrows)
 Acyclic: No cycles or loops — the graph can't go backward or repeat steps
 
@@ -43,30 +43,29 @@ Calculates a final score for each model using a weighted rubric and selects the 
 
 🧠 Designed to work with LangGraph for composable AI workflows
 
-# Install dependencies (requires Poetry)
+# Requirements
 poetry install
+Python 3.10+
+Groq API key
 
 # Run the evaluator with a prompt
 poetry run python main.py --prompt "performs read and write operations"
 
 linux-driver-evaluator/
-├── main.py              # Entry point for the app
-├── .env                 # Stores API keys
-├── generated/           # Stores generated C code
-│   ├── char_driver_groq.c
-│   └── char_driver_local.c
-├── nodes/               # Modular evaluation nodes
-│   ├── eval_llm.py      # LLM code generation node
-│   ├── run_static.py    # Static style checker node
-│   ├── final_score.py   # Static score computation node
-│   └── save_code.py     # Saves code to disk
-├── graph_builder.py     # LangGraph node definitions
-├── README.md            # This file
+├── main.py # Entry point for the app
+├── .env # Stores API keys
+├── generated/ # Stores generated C code
+│ ├── char_driver_groq.c
+│ └── char_driver_local.c
+├── nodes/ # Modular evaluation nodes
+│ ├── eval_llm.py # LLM code generation node
+│ ├── run_static.py # Static style checker node
+│ ├── final_score.py # Static score computation node
+│ └── save_code.py # Saves code to disk
+├── graph_builder.py # LangGraph node definitions
+├── README.md # This file
 ├── poetry.lock
-└── pyproject.toml       # Poetry configuration
+└── pyproject.toml # Poetry configuration
 
-Requirements
-Python 3.10+
-Poetry
-Groq API key
 
+Developed with ❤️ by Kavya Negi. Contributions are welcome!
