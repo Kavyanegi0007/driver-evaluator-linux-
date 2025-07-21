@@ -1,19 +1,5 @@
 import os
 import re
-# def save_code_node(state):
-#     os.makedirs("generated", exist_ok=True)
-#     groq_path = "generated/char_driver_groq.c"
-#     local_path = "generated/char_driver_local.c"
-    
-
-#     with open(groq_path, "w") as f: f.write(state["groq_code"])
-#     with open(local_path, "w") as f: f.write(state["local_code"])
-
-#     return {
-#         "groq_path": groq_path,
-#         "local_path": local_path
-#     }
-
 
 def strip_markdown(code: str) -> str:
     # Remove ```c or ``` and trailing ```
