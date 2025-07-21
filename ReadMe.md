@@ -49,26 +49,21 @@ poetry install
 # Run the evaluator with a prompt
 poetry run python main.py --prompt "performs read and write operations"
 
-
 linux-driver-evaluator/
-│
-├── main.py                   # Entry point for the app
-├── .env                      # Stores API keys
-├── generated/                # Stores generated C code
+├── main.py              # Entry point for the app
+├── .env                 # Stores API keys
+├── generated/           # Stores generated C code
 │   ├── char_driver_groq.c
 │   └── char_driver_local.c
-├
-│
-├── nodes/                   # Modular evaluation nodes
-│   ├── eval_llm.py          # LLM code generation node
-│   ├── run_static.py        # Static style checker node
-│   ├── final_score.py       # Static score computation node
-│   └── save_code.py         # Saves code to disk
-│
-├── graph_builder.py         # LangGraph node definitions
-├── README.md                # This file
-└── pyproject.toml           # Poetry configuration
-
+├── nodes/               # Modular evaluation nodes
+│   ├── eval_llm.py      # LLM code generation node
+│   ├── run_static.py    # Static style checker node
+│   ├── final_score.py   # Static score computation node
+│   └── save_code.py     # Saves code to disk
+├── graph_builder.py     # LangGraph node definitions
+├── README.md            # This file
+├── poetry.lock
+└── pyproject.toml       # Poetry configuration
 
 Requirements
 Python 3.10+
