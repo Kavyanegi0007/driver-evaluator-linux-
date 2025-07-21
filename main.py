@@ -13,12 +13,7 @@ def main():
         "prompt": args.prompt
     })
 
-    # # Save report as JSON
-    # with open("reports/report.json", "w") as f:
-    #     json.dump(result["report"], f, indent=2)
-
-    # print("Report saved to reports/report.json")
-    # print("Result:", result["report"]["winner"])
+    
 
 if __name__ == "__main__":
     main()
