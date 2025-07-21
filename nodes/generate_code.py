@@ -4,7 +4,7 @@ from groq import Groq
 
 load_dotenv()
 
-# Configure Groq
+
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def call_groq_model(model_name: str, prompt: str) -> str:
